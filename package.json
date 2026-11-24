@@ -1,0 +1,24 @@
+{
+  "name": "aurum",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Multi-source precious metals price API (gold, silver, platinum, palladium) with a local Indonesian retail layer.",
+  "scripts": {
+    "dev": "tsx watch src/node.ts",
+    "start": "tsx src/node.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.0",
+    "hono": "^4.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

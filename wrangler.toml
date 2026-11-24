@@ -1,0 +1,17 @@
+name = "metal-price-api"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+# Cache persisten (disarankan di Workers, karena memori isolate tidak awet).
+# Buat dulu:  npx wrangler kv namespace create CACHE
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "<ID_DARI_PERINTAH_DI_ATAS>"
+
+[vars]
+LICENSE_REVIEWED = ""            # isi setelah lisensi dicek, mis. "metalcharts"
+SPOT_PRIORITY = "metalcharts,apininjas"
+
+# Rahasia (jangan taruh di sini):
+#   npx wrangler secret put METALCHARTS_API_KEY
+#   npx wrangler secret put APININJAS_API_KEY
